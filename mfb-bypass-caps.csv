@@ -1,0 +1,16 @@
+Node,Cap Value,Type,Package,Source,Qty,Notes
+5V star,470uF 16V,Electrolytic radial,5mm radial,Buy (Panasonic FR or similar),1,Bulk; ESR damps wiring inductance
+5V star,100nF,X7R ceramic,disc (kit 104),Kit,1,HF pair with bulk cap
+Teensy VIN,10uF,X5R/X7R ceramic,disc,Kit,1,Rides through transients; onboard decoupling exists
+PCM1808 5V pin,100nF,X7R ceramic,disc (kit 104),Kit,1,Within 5mm of pin
+PCM1808 bulk,10uF,X7R ceramic,disc,Kit,1,Local bulk
+UDA1334A VIN pin,100nF,X7R ceramic,disc (kit 104),Kit,1,Within 5mm of pin
+UDA1334A bulk,10uF,X7R ceramic,disc,Kit,1,Local bulk
+ADXL326 Vin pin,100nF,X7R ceramic,disc (kit 104),Kit,1,Datasheet Cdc requirement
+ADXL326 regulator out,1uF,X7R ceramic,disc,Kit,1,Breakout regulator stability
+ADXL326 Z-out filter,22nF,NP0/C0G preferred,disc (kit 223 is X7R - acceptable),Kit or buy NP0,1,Anti-alias corner; parallel with 4.7nF
+ADXL326 Z-out filter,4.7nF,NP0/C0G preferred,disc (kit 472 is X7R - acceptable),Kit or buy NP0,1,Parallel sum 26.7nF vs ADXL internal 32k = ~186Hz
+INA240 VS pin,100nF,X7R ceramic,disc (kit 104),Kit,1,Per datasheet
+INA240 VS bulk,1uF,X7R ceramic,disc,Kit,1,Per datasheet
+INA240 OUT to PCM1808 IN2,1uF 63V,PET film (WIMA MKS2),5mm box,Buy,1,Series coupling; film mandatory - no piezo/bias distortion in measurement path
+Sub amp input (if DIY Class AB),2.2uF,PET/PP film,box,Buy,1,Input coupling; sets HPF with amp Zin
